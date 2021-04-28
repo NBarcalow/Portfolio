@@ -22,3 +22,39 @@ RSpec.describe Post, type: :model do
 
   end
 end
+
+RSpec.describe Post, type: :model do
+    # ...
+  
+    context "scopes tests" do
+      let(:params) { { title: "Title", description: "some description" } }
+      before(:each) do
+        Post.create(params)
+        Post.create(params)
+        Post.create(params)
+      end
+  
+      it "should return all projects" do
+        expect(Post.count).to eq(3)
+      end
+  
+    end
+  end
+
+  RSpec.describe PostsController, type: :controller do
+    context "GET #index" do
+      it "returns a success response" do
+        get :index
+        # expect(response.success).to eq(true)
+        expect(response).to be_success
+      end
+    end
+  
+    context "GET #show" do
+      let!(:project) { Post.create(title: "Test title", description: "Test description") }
+      it "returns a success response" do
+        get :show, params: { id: project }
+        expect(response).to be_success
+      end
+    end
+  end

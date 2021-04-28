@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem 'friendly_id', '~> 5.4.0'
 gem 'jbuilder', '~> 2.5'
 
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -50,6 +51,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.7'
+  gem 'capybara'
+  
 end
 
 group :development do
@@ -63,10 +66,11 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  #gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'simplecov', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
