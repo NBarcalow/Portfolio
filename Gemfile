@@ -25,6 +25,7 @@ gem 'bootstrap', '~> 5.0.0.beta2'
 gem 'jquery-rails'
 gem 'friendly_id', '~> 5.4.0'
 gem 'jbuilder', '~> 2.5'
+gem 'devise'
 
 
 # Use Redis adapter to run Action Cable in production
