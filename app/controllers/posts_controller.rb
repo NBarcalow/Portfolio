@@ -15,6 +15,10 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def list
+    @post = Post.list
+  end
+
   # GET /posts/1/edit
   def edit
   end
@@ -35,7 +39,7 @@ class PostsController < ApplicationController
   end
 
   # PATCH/PUT /posts/1 or /posts/1.json
-  def update
+  def update 
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: "Post was successfully updated." }
@@ -64,6 +68,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body, :description, :slug)
+      params.require(:post).permit(:title, :body, :description)
     end
 end

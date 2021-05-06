@@ -1,3 +1,5 @@
+<% provide(:page_title, @post.title) %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -15,10 +17,6 @@
   <%= @post.description %>
 </p>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @post.slug %>
-</p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
