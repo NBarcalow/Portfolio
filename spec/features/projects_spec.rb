@@ -1,8 +1,17 @@
 require 'rails_helper'
 
 RSpec.feature "Projects", type: :feature do
+
+
   context "Create new project" do
     before(:each) do
+      visit root_path
+      click_link "Login"
+      click_link "Sign up"
+      fill_in "Email", with: "example@uccs.edu"
+      fill_in "Password", with: "example"
+      fill_in "Password confirmation", with: "example"
+      click_button "Sign up"
       visit new_post_path
       within("form") do
         fill_in "Title", with: "Test title"
