@@ -18,13 +18,13 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <p><%= button_to "Home", root_path, :id => "open-contacts-dialog-btn", :class => "inbox-sf-add-btn tip", :method => :get %></p>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sign Out</a>
+          <p><%= button_to "Sign Out", destroy_user_session_path, method: :delete %></p>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Index</a>
+          <p><%= button_to "Index", root_path, :id => "open-contacts-dialog-btn", :class => "inbox-sf-add-btn tip", :method => :get %></p>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -41,6 +41,7 @@
         <div class="container">
           <h1 class="display-3">Portfolio</h1>
           <p>Some stuff about the Portfolio owner goes here!.</p>
+          <h2><strong><%= current_user.email %></strong></h2>
           <img class="rounded-circle float-right img-thumbnail" style="width:25%" src="https://pathfindercareers.com/wp-content/uploads/2019/06/poop.jpeg" data-holder-rendered="true"
           <p><%= button_to "Learn More", root_path, :id => "open-contacts-dialog-btn", :class => "inbox-sf-add-btn tip", :method => :get %></p>
         </div>
