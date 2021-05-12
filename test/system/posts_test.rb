@@ -16,7 +16,6 @@ class PostsTest < ApplicationSystemTestCase
 
     fill_in "Body", with: @post.body
     fill_in "Description", with: @post.description
-    fill_in "Slug", with: @post.slug
     fill_in "Title", with: @post.title
     click_on "Create Post"
 
@@ -30,7 +29,6 @@ class PostsTest < ApplicationSystemTestCase
 
     fill_in "Body", with: @post.body
     fill_in "Description", with: @post.description
-    fill_in "Slug", with: @post.slug
     fill_in "Title", with: @post.title
     click_on "Update Post"
 
