@@ -15,6 +15,6 @@ deploy:
   provider: heroku
   api_key: e9374020-9dd7-486a-9055-63cc910829d0
   app: Post
-  run "rake db:migrate"
+  run: "rake db:migrate"
   on:
     all_branches: true

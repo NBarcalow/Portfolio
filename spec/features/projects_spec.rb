@@ -6,7 +6,7 @@ RSpec.feature "Projects", type: :feature do
 
   context "Create new project" do
     before(:each) do
-      visit root_path
+      visit posts_path
       click_link "Login"
       click_link "Sign up"
       fill_in "Email", with: "example@uccs.edu"
